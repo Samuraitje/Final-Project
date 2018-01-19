@@ -1,0 +1,18 @@
+html
+	include head
+	body
+	div.home
+		img#tag(src="images/tag.png")
+		img#logo(src="images/logo.png")
+	div.login
+		h1 Login
+		form(method='GET' action='/login')
+			div.loginField
+				input(type='text' placeholder='Username' name='username')
+			div.loginField
+				input(type='password' placeholder='Password' name='password')
+			div.loginButton
+				button(type='submit' value='submit') Login
+		form(method='GET', action='/signUp')
+			div.createUser
+				button(type='submit' value='submit') Create User
