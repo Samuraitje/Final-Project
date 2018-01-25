@@ -1,0 +1,12 @@
+html
+	include head
+	body
+		include nav
+	div.titleList 
+		h1 Memo list
+	div.memoWrapper
+		for item in items
+			div.memoItem
+				table
+					tr
+						td #{item.itemName}

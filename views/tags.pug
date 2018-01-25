@@ -1,0 +1,11 @@
+html
+	include head
+	body
+		include nav
+	div.titleTags
+		h1 Tags
+	div.newTag
+		form(method="POST" id="tags" action="tags")
+			ul(id="array_tag_handler_1")
+				input(type="text" id="tags" name="tags")
+

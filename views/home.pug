@@ -1,0 +1,13 @@
+html
+	include head
+	body
+		include nav
+		div.logo
+			img#logoHome(src="images/logo.png")
+		div.newMemo
+			form(method='POST' action='newMemo')
+				div.newMemoItem
+					input(type='text' placeholder='New Memo' name='itemName')
+				div.newMemoButton
+					button(type='submit' value='submit') Add Memo
+				!= messages()

@@ -4,7 +4,7 @@ const Client = pg.Client;
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
-// const sequelize = require('./sequelize.js');
+const sequelize = require('./sequelize.js');
 const bcrypt = require('bcrypt');
 const expressValidator = require('express-validator');
 const flash = require('connect-flash');
@@ -41,20 +41,13 @@ app.use(function (req, res, next) {
 
 app.set('view engine', 'pug');
 
-//Initialize sequelize
-// require('./sequelize.js')();
-
-//Login page
-require('./routes/login')(app);
-
-//Sign up Page
-require('./routes/signUp')(app);
-
-// //Log out
-// require('./routes/logOut')(app);
-
-// //Home page
-require('./routes/home')(app);
+require('./sequelize.js')();
+require('./routes/login')(app, db, bcrypt);
+require('./routes/signUp')(app, db, bcrypt);
+require('./routes/home')(app, db);
+require('./routes/list')(app, db);
+require('./routes/tags')(app, db);
+require('./routes/signOut')(app);
 
 
 /*--------------local server on port 3000--------------------*/

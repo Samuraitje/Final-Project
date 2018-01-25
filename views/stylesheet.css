@@ -8,34 +8,48 @@ p {
 }
 
 /*-------------------------Navbar-------------------------*/
-nav ul {
+
+nav {
+	display: block;
+	height: 40px;
+	width: 100%;
+	background: url(images/hamburger.svg) no-repeat 3% center;
+}
+
+nav.open{
+	background-color: rgb(255, 0, 34);
+}
+
+ul {
 	list-style-type: none;
 	font-family: 'Josefin Sans';
 	padding: 0;
+	height: 0;
 	overflow: hidden;
-	background-color: #000;
 	text-align: center;
 	margin: 0;
 }
 
-nav li {
-	margin-left: 60px;
+ul.open {
+	height: auto;
 }
 
-nav li a {
-	float: left;
-	background-color: #000;
-	font-size: 10pt;
-	color: white;
-	text-align: center;
-	padding: 14px 16px;
+ul li {
+	float: none;
+	text-align: left;
+	width: 100%;
+	margin: 0;
+}
+
+ul li a {
+	background-color: rgb(255, 255, 132);
+	font-size: 18pt;
+	color: rgb(255, 0, 34);
+	display: block;
+	padding: 20px;
+	border-bottom: 3px solid rgb(255, 0, 34);
 	margin: 0;
 	text-decoration: none;
-}
-
-nav li a:hover {
-	background-color: #fff;
-	color: black;
 }
 
 nav:after{
@@ -46,27 +60,66 @@ nav:after{
 
 /*-------------------------Home Page------------------------*/
 
-.functions {
-	margin: 0 auto;
-	margin-top: 50px;
+.logo {
+	height: 60px;
+	padding-top: 30px;
 }
 
-.functionButton {
+.logo #logoHome {
+	height: 50px;
+	width: 120px;
+	margin: 0 auto;
+	display: block;
+}
+
+.newMemo {
+	height: 180px;
+	padding: 30px;
+	padding-top: 0;
+	background: url(images/tag1.png) no-repeat 60% center ;
+}
+
+.newMemo form{
+	padding-top: 75px;
+}
+
+.newMemoItem {
 	font-family: 'Josefin Sans';
-	font-size: 18pt;
 	margin: 0 auto;
-	margin-top: 50px;
 	width: 230px;
-	height: 100px;
-	text-align: center;
-	line-height: 100px;
-	background-color: #000;
-	border-radius: 5px;
+	height: 40px;
+	padding: 10px;
+	padding-left: 20px;
 }
 
-.functionButton a {
-	text-decoration: none;
-	color: #fff;
+.newMemoItem input {
+	font-family: 'Josefin Sans';
+	font-size: 12pt;
+	border-radius: 15px;
+	padding-left: 20px;
+	width: 190px;
+	height: 40px;
+	border: none;
+}
+
+.newMemoButton {
+	margin: 0 auto;
+	margin-top: 40px;
+	width: 120px;
+	height: 30px;
+	padding: 10px;
+	padding-top: 30px;
+	border-color: #000;
+}
+
+.newMemoButton button {
+	font-size: 10pt;
+	width: 120px;
+	height: 30px;
+	border-radius: 15px;
+	background-color: rgb(255,255,132);
+	color: rgb(255,0,34);
+	border-color: rgb(255,255,132);
 }
 
 /*------------------------Login Page------------------------*/
@@ -240,142 +293,99 @@ nav:after{
 	border-color: rgb(255,255,132);
 }
 
-/*----------------------New Blog Page-----------------------*/
-
-.newBlog {
-	margin: 0 auto;
-	width: 400px;
-	height: 400px;
-	font-family: 'Josefin Sans';
-}    
-
-.newBlog h1 {
-	margin-top: 30px;
-	text-align: center;
-	font-size: 20pt;
-	height: 20px;
-	color: #000;
-}
-
-.newBlog hr {
-	border: black solid 1pt;
-}
-
-.newBlogTitle {
-	border: solid #000 1px;
-	margin: 0 auto;
-	margin-top: 10px;
-	width: 230px;
-	height: 20px;
-	padding: 10px;
-}
-
-.newBlogTitle input {
-	font-family: 'Josefin Sans';
-	width: 230px;
-	height: 20px;
-}
-
-.newBlogMessage {
-	border: solid #000 1px;
-	margin: 0 auto;
-	margin-top: 10px;
-	width: 230px;
-	height: 200px;
-	padding: 10px;
-}
-
-.newBlogMessage textarea {
-	font-family: 'Josefin Sans';
-	width: 230px;
-	height: 200px;
-}
-
-.newBlogButton {
-	margin: 0 auto;
-	margin-top: 10px;
-	width: 230px;
-	height: 20px;
-	padding: 10px;
-}
-
-.newBlogButton button {
-	width: 230px;
-	border-radius: 5px;
-	background-color: #000;
-	color: #FFF;
-	border-color: #000;
-	height: 20px;
-}
 
 /*-----------------------All & My blogs page----------------------*/
 
-.title {
+.titleList {
 	font-family: 'Josefin Sans';
 	margin: 0 auto;
 	width: 30%;
-	color: #000;
+	color: rgb(255, 0, 34);
 }
 
-.title h1 {
+.titleList h1 {
 	margin-top: 30px;
 	text-align: center;
 	font-size: 20pt;
 }
 
-.title hr {
-	border: black solid 1pt;
-}
-
-.blogPostsWrapper {
+.memoWrapper {
 	margin: 0 auto;
-	width: 30%;
-	font-family: 'Josefin Sans';
-} 
-
-.blogPostsWrapper {
-	margin: 0 auto;
-	width: 30%;
-	font-family: 'Josefin Sans';
-} 
-
-.blogPostsTitle {
-	box-sizing: border-box;
-	border: 1pt black solid;
+	height: 100px;
 	width: 100%;
-	background-color: black;
+	font-family: 'Josefin Sans';
+} 
+
+.memoItem {
+	margin-top: 20px;
+	box-sizing: border-box;
+	width: 100%;
+	height: 100px;
+	background: url(images/tag2.png) no-repeat 60% center;
 }
 
-.blogPostsTitle table{
+.memoItem table{
 	margin: 0 auto;
 	text-align: center;
 	vertical-align: middle;
 	padding: 10px;
 }
 
-.blogPostsTitle th{
-	color: white;
-	font-size: 12pt;
+.memoItem td{
+	width: 150px;
 }
 
-.blogPostsTitle td{
-	font-size: 16pt;
-	color: white;
-	border-top: solid white 1pt;
+.memoItem td{
+	font-size: 11pt;
+	color: rgb(255, 0, 34);
 	padding: 5px;
 }
 
-.blogPostsBody {
-	box-sizing: border-box;
-	border: 1pt black solid;
-	width: 100%;
-	margin-bottom: 20px;
+/*-----------------------All Tags page----------------------*/
+
+.titleTags {
+	font-family: 'Josefin Sans';
+	margin: 0 auto;
+	width: 30%;
+	color: rgb(255, 0, 34);
 }
 
-.blogPostsBody table{
+.titleTags h1 {
+	margin-top: 30px;
+	text-align: center;
+	font-size: 20pt;
+}
+
+.memoWrapper {
+	margin: 0 auto;
+	height: 100px;
+	width: 100%;
+	font-family: 'Josefin Sans';
+} 
+
+.memoItem {
+	margin-top: 20px;
+	box-sizing: border-box;
+	width: 100%;
+	height: 100px;
+	background: url(images/tag2.png) no-repeat 60% center;
+}
+
+.memoItem table{
+	margin: 0 auto;
+	text-align: center;
+	vertical-align: middle;
 	padding: 10px;
-	font-size: 10pt;
-	color: black;
+}
+
+.memoItem td{
+	width: 150px;
+}
+
+.memoItem td{
+	font-size: 11pt;
+	color: rgb(255, 0, 34);
+	padding: 5px;
 }
 
 /*-------------------------Notification Messages-------------------------*/
